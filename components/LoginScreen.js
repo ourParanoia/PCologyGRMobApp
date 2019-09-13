@@ -101,18 +101,23 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     marginHorizontal: 50,
-    paddingTop: '50%'
+    paddingTop: '50%',
+    borderWidth: 1,
+    borderColor: '#040F3D' ,
+    marginVertical: 75,
+    borderRadius: 10
   },
   textInput: {
     height: 40,
     width: '90%',
-    borderColor: 'gray',
+    borderColor: '#040F3D',
     borderWidth: 1,
-    marginTop: 8
+    marginTop: 8 ,
+    color: '#040F3D'
   },
   text: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: '#040F3D',
     lineHeight: 24,
     width: '75%',
     marginBottom: '10%',

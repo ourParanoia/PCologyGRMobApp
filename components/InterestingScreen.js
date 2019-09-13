@@ -50,33 +50,33 @@ class InterestingScreen extends Component {
     if (this.state.isLoading) {
       return (
         <View style={styles.activity}>
-          <ActivityIndicator size="large" color="#0000ff" />
+          <ActivityIndicator size="large" color="#c6c4c5" />
         </View>
       )
     }
     return (
       <React.Fragment>
         <View style={styles.subcontainer}>
-          <Button
-            backgroundColor="#0052cc"
-            color="white"
+        <Button
+            backgroundColor="#040F3D"
+            color="#4BFFA5"
             style={styles.button}
             leftIcon={{
-              name: 'book',
+              name: 'align-justify',
               type: 'font-awesome',
-              color: 'white'
+              color: '#4BFFA5'
             }}
-            title="Όλα τα άρθρα"
-            onPress={() => this.props.navigation.navigate('Board')}
+            title="Κατηγορίες"
+            onPress={() => this.props.navigation.navigate('Categories')}
           />
           <Button
-            backgroundColor="#0052cc"
-            color="white"
+            backgroundColor="#040F3D"
+            color="#4BFFA5"
             style={styles.button}
             leftIcon={{
               name: 'lock',
               type: 'font-awesome',
-              color: 'white'
+              color: '#4BFFA5'
             }}
             title="Σύνδεση"
             onPress={() => this.props.navigation.navigate('Login')}
@@ -87,22 +87,22 @@ class InterestingScreen extends Component {
             {this.state.events.map((item, i) => (
               <React.Fragment>
                 {item.category === this.state.category ? (
-                  <View style={{ backgroundColor: '#00ffcc' }}>
-                    <ListItem
-                      key={i}
-                      title={item.title}
-                      leftIcon={{
-                        name: 'book',
-                        type: 'font-awesome',
-                        color: 'black'
-                      }}
-                      onPress={() => {
-                        this.props.navigation.navigate('BoardDetails', {
-                          eventskey: `${JSON.stringify(item.key)}`
-                        })
-                      }}
-                    />
-                  </View>
+                  <View style={{ backgroundColor: '#C6C4C5', color: "#040F3D" }}>
+                  <ListItem
+                    key={i}
+                    title={item.title}
+                    leftIcon={{
+                      name: 'book',
+                      type: 'font-awesome',
+                      color: '#040F3D'
+                    }}
+                    onPress={() => {
+                      this.props.navigation.navigate('BoardDetails', {
+                        eventskey: `${JSON.stringify(item.key)}`
+                      })
+                    }}
+                  />
+                </View>
                 ) : null}
               </React.Fragment>
             ))}
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingBottom: 22,
-    backgroundColor: '#66c2ff'
+    backgroundColor: '#c6c4c5'
   },
   item: {
     padding: 10,
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   subcontainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: '#0052cc'
+    backgroundColor: '#040F3D'
   },
   button: {
     backgroundColor: 'green',
@@ -146,4 +146,3 @@ const styles = StyleSheet.create({
 })
 
 export default InterestingScreen
-//backgroundColor: "#47d1d1"

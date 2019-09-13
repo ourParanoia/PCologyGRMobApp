@@ -56,7 +56,7 @@ class BoardScreen extends Component {
     if (this.state.isLoading) {
       return (
         <View style={styles.activity}>
-          <ActivityIndicator size="large" color="#0000ff" />
+          <ActivityIndicator size="large" color="#c6c4c5" />
         </View>
       )
     }
@@ -149,4 +149,3 @@ const styles = StyleSheet.create({
 })
 
 export default BoardScreen
-//backgroundColor: "#47d1d1"

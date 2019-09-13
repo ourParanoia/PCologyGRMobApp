@@ -65,7 +65,7 @@ class AddBoardScreen extends Component {
     if (this.state.isLoading) {
       return (
         <View style={styles.activity}>
-          <ActivityIndicator size="large" color="#0000ff" />
+          <ActivityIndicator size="large" color="#C6C4C5" />
         </View>
       )
     }
@@ -119,11 +119,12 @@ class AddBoardScreen extends Component {
           <Button
             large
             buttonStyle={{
-              backgroundColor: '#0052cc',
+              backgroundColor: '#4BFFA5',
               paddingTop: '5%',
-              borderRadius: 30
+              borderRadius: 10,
             }}
-            leftIcon={{ name: 'save', color: 'white' }}
+            color= '#040F3D'
+            leftIcon={{ name: 'save', color: '#040F3D' }}
             title="Δημοσίευση"
             onPress={() => this.saveBoard()}
           />
@@ -136,14 +137,15 @@ class AddBoardScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff'
+    backgroundColor: '#C6C4C5'
   },
   subContainer: {
     flex: 1,
     alignItems: 'center',
     marginHorizontal: 50,
     paddingTop: '5%',
-    paddingBottom: '5%'
+    paddingBottom: '5%',
+    backgroundColor: '#C6C4C5'
   },
   activity: {
     position: 'absolute',
@@ -159,14 +161,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#03A9F4',
-    paddingTop: '10%'
+    paddingTop: '10%' ,
+    height: 40,
+    width: '95%',
   },
   textInput: {
     height: 40,
     width: '95%',
-    borderColor: 'blue',
-    //borderWidth: 1,
-    borderRadius: 10
+    borderColor: '#040F3D',
+    borderWidth: 1,
+    borderRadius: 10 ,
+    color: '#040F3D' 
   }
 })
 

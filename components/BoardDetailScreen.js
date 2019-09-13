@@ -63,7 +63,7 @@ class BoardDetailScreen extends Component {
     if (this.state.isLoading) {
       return (
         <View style={styles.activity}>
-          <ActivityIndicator size="large" color="#0000ff" />
+          <ActivityIndicator size="large" color="#C6C4C5" />
         </View>
       )
     }
@@ -72,10 +72,8 @@ class BoardDetailScreen extends Component {
         
           <View style={styles.container}>
             <View>
-              <Image source={require("../assets/categoryImages/development.jpg")} left= "0"
-              right="0"
-              top="0"
-              bottom="0"  />
+              <Image source={require("../assets/categoryImages/development.jpg")} 
+                />
             </View>
             <View>
               <Text
@@ -149,7 +147,7 @@ class BoardDetailScreen extends Component {
                   
             <Button
               large
-              buttonStyle={{ borderRadius: 30 }}
+              buttonStyle={{ borderRadius: 10 }}
               backgroundColor={'#4BFFA5'}
               leftIcon={{ name: 'lock' , color: '#040F3D' }}
               color={"#040F3D"}
